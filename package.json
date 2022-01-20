@@ -2,7 +2,7 @@
 	"author": "Carlos Ferreras",
 	"license": "MIT",
 	"scripts": {
-		"start": "node index.js"
+		"start": "node bot.js"
 	},
 	"dependencies": {
 		"axios": "^0.25.0",
