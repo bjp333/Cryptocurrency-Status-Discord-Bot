@@ -6,6 +6,7 @@
   },
   "dependencies": {
     "axios": "^0.25.0",
+    "bot.js": "^0.0.1",
     "discord.js": "^11.6.4",
     "dotenv": "^5.0.0"
   },
