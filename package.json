@@ -1,12 +1,26 @@
 {
-	"author": "Carlos Ferreras",
-	"license": "MIT",
-	"scripts": {
-		"start": "node index.js"
-	},
-	"dependencies": {
-		"axios": "^0.25.0",
-		"discord.js": "^11.3.0",
-		"dotenv": "^5.0.0"
-	}
+  "author": "Carlos Ferreras",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "axios": "^0.25.0",
+    "discord.js": "^11.3.0",
+    "dotenv": "^5.0.0"
+  },
+  "name": "cryptocurrency-status-discord-bot",
+  "description": "This bot will update its status message with the current price of the desired cryptocurrency.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bjp333/Cryptocurrency-Status-Discord-Bot.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/bjp333/Cryptocurrency-Status-Discord-Bot/issues"
+  },
+  "homepage": "https://github.com/bjp333/Cryptocurrency-Status-Discord-Bot#readme"
 }
