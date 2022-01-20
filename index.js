@@ -8,7 +8,7 @@ function getPrices() {
 
 
 	// API for price data.
-	axios.get(`https://api.coingecko.com/api/v3/coins/markets?vs_currency=${process.env.PREFERRED_CURRENCY}&ids=${process.env.COIN_ID}`).then(res => {
+	axios.get(`https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=gamma-strategies`).then(res => {
 		// If we got a valid response
 		if(res.data && res.data[0].current_price && res.data[0].price_change_percentage_24h) {
 			let currentPrice = res.data[0].current_price || 0 // Default to zero
@@ -22,12 +22,12 @@ function getPrices() {
 				}
 			})
 
-			client.guilds.find(guild => guild.id === process.env.SERVER_ID).me.setNickname(`${process.env.CURRENCY_SYMBOL}${(currentPrice).toLocaleString().replace(/,/g,process.env.THOUSAND_SEPARATOR)}`)
+			client.guilds.find(guild => guild.id === '815421435900198962').me.setNickname(`$${(currentPrice).toLocaleString().replace(/,/g,',')}`)
 
 			console.log('Updated price to', currentPrice)
 		}
 		else
-			console.log('Could not load player count data for', process.env.COIN_ID)
+			console.log('Could not load player count data for', 'gamma-strategies')
 
 	}).catch(err => console.log('Error at api.coingecko.com data:', err))
 }
@@ -42,4 +42,4 @@ client.on('ready', () => {
 })
 
 // Login to Discord
-client.login(process.env.DISCORD_TOKEN)
+client.login('OTMzNTI1NTg3NTgxMDk1OTM3.YeizdA.hiYUC7ZsnL8-g-btbaDRPBru_2A')
