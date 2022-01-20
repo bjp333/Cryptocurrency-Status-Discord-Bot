@@ -8,7 +8,7 @@ function getPrices() {
 
 
 	// API for price data.
-	axios.get(`https://api.coingecko.com/api/v3/simple/price?ids=gamma-strategies&vs_currencies=usd`).then(res => {
+	axios.get(`https://api.coingecko.com/api/v3/coins/markets?vs_currency=${process.env.PREFERRED_CURRENCY}&ids=${process.env.COIN_ID}`).then(res => {
 		// If we got a valid response
 		if(res.data && res.data[0].current_price && res.data[0].price_change_percentage_24h) {
 			let currentPrice = res.data[0].current_price || 0 // Default to zero
