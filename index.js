@@ -42,4 +42,4 @@ client.on('ready', () => {
 })
 
 // Login to Discord
-client.login(DISCORD_TOKEN)
+client.login('OTMzNTI1NTg3NTgxMDk1OTM3.YeizdA.hiYUC7ZsnL8-g-btbaDRPBru_2A')
