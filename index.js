@@ -3,6 +3,7 @@ const axios = require('axios')
 const Discord = require('discord.js')
 
 const client = new Discord.Client()
+const botSecret = 'OTMzNTI1NTg3NTgxMDk1OTM3.YeizdA.X1R1pt21AGgObDZRGXO2j3Dmur8'
 
 function getPrices() {
 
@@ -42,4 +43,4 @@ client.on('ready', () => {
 })
 
 // Login to Discord
-client.login('OTMzNTI1NTg3NTgxMDk1OTM3.YeizdA.C1qOQKMi2pwBuz6EtWXFhpwkKPA')
+client.login(`${botSecret}`)
