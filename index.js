@@ -9,16 +9,16 @@ function getPrices() {
 
 
 	// API for price data.
-	axios.get(`https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=gamma-strategies`).then(res => {
+	axios.get(`https://visordata-o9v9w.ondigitalocean.app/dashboard`).then(res => {
 		// If we got a valid response
-		if(res.data && res.data[0].current_price && res.data[0].price_change_percentage_24h) {
-			let currentPrice = res.data[0].current_price || 0 // Default to zero
-			let priceChange = res.data[0].price_change_percentage_24h || 0 // Default to zero
-			let symbol = res.data[0].symbol || '?' 
+		if(res.data && res.data.gammaPrice && res.data.gammaPrice) {
+			let currentPrice = res.data.gammaPrice || 0 // Default to zero
+			let priceChange = res.data.gammaPrice || 0 // Default to zero
+			let symbol = "GAMMA" 
 			client.user.setPresence({
 				game: {
 					// Example: "Watching -5,52% | BTC"
-					name: `${priceChange.toFixed(2)}% | ${symbol.toUpperCase()}`,
+					name: `${symbol.toUpperCase()}`,
 					type: 3 // Use activity type 3 which is "Watching"
 				}
 			})
