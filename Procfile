@@ -1,1 +1,1 @@
-Worker: node gamma-pricebot.js
+Worker: node index.js
